@@ -214,7 +214,7 @@ public static void casting(int number)
 ```
 
 **Library Exercise Solution:**  
-```
+```java
 import java.util.Scanner;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
