@@ -140,17 +140,24 @@ public class Numbers {
     {
         double result = 1;
 
-        for (int i=0; i<exponent; i++)
+        for (int i=0; i<exponent;i++)
         {
             result *= base;
         }
-
         return result;
     }
+    public static double square_root(int number)
+    {
+        return Math.sqrt(number);
+    }
+    public static int abs(int number)
+    {
+        return (number < 0) ? -number : number;
+    }
     public static void main(String[] args) {
-        
-        double result = power(5, 2);
-        System.out.println("Result: " + result);
+        System.out.println("Power: " + power(2, 3));
+        System.out.println("Square Root: " + square_root(16));
+        System.out.println("Abs: " + abs(-15));
     }
 }
 ```
@@ -204,4 +211,44 @@ public static void casting(int number)
         System.out.println("Double : " + d);
 
     }
+```
+
+**Library Exercise Solution:**  
+```
+import java.util.Scanner;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
+public class LibraryFines {
+
+    public static String calculateFines(LocalDate dueDate, LocalDate returnDate)
+    {
+        long days = ChronoUnit.DAYS.between(dueDate, returnDate);
+        
+        if (days == 0)
+        {
+            return "No Fine";
+        }
+        return String.valueOf(2 * days) + " dollars fine";
+    }
+    public static void main(String[] args) {
+       Scanner scanner = new Scanner(System.in);
+       System.out.println("Enter return date in dd mm yyyy format: ");
+       System.out.print("Day (dd): ");
+       int days = scanner.nextInt();
+       System.out.print("Month (mm): ");
+       int months = scanner.nextInt();
+       System.out.print("Year (yyyy): ");
+       int years = scanner.nextInt();
+       scanner.close();
+
+       LocalDate returnDate = LocalDate.of(years, months, days);
+
+       LocalDate dueDate = LocalDate.of(2023, 9, 5);
+       System.out.println("Due Date: " + dueDate.toString());
+
+       System.out.println(calculateFines(dueDate, returnDate));
+    }
+}
+
 ```
