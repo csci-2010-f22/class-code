@@ -290,3 +290,79 @@ public class Driver {
     }
 }
 ```
+**Event Exercise Solution**  
+
+`Event.java`
+```
+import java.time.LocalDate;
+
+public class Event {
+    protected String description;
+    protected LocalDate date;
+
+    public Event(String description, LocalDate date)
+    {
+        this.description = description;
+        this.date = date;
+    }
+    
+    public void display()
+    {
+        System.out.println("Event Description: " + this.description + ", Date: "  + this.date);
+    }    
+}
+```
+`Wedding.java`
+```
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class Wedding extends Event{
+    public Wedding(String description, LocalDate date)
+    {   
+        super(description, date);
+    }
+    public void display()
+    {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/YYYY");
+        System.out.println("Event Description: " + description + ", Date: "  + formatter.format(date));
+    }
+}
+```
+`Birthday.java`
+```
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
+
+public class Birthday extends Event{
+    public Birthday(String description, LocalDate date)
+    {
+        super(description, date);
+    }
+    public void display()
+    {
+        String formattedDate = date.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG));
+        System.out.println("Event Description: " + description + ", Date: "  + formattedDate);
+    }
+}
+```
+`Driver.java`
+```
+import java.time.LocalDate;
+
+public class Driver {
+
+    public static void main(String[] args) 
+    {
+        Event[] events = new Event[2];
+        events[0] = new Wedding("This is a wedding event", LocalDate.of(2023, 9, 25));
+        events[1] = new Birthday("This is a birthday event", LocalDate.of(2023, 9, 15));
+
+        for (int i=0; i<2; i++)
+        {
+            events[i].display();
+        }
+    }
+}
+```
