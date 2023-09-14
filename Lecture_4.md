@@ -1,10 +1,9 @@
 # Abstraction, Exception Handling, Packages and Final
+
 Java uses the concept of Abstract classes just like C++ except that it does not use virtual keyword and instead uses abstract keyword.
 
 `Shape.java`
 ```
-package Abstract_Methods;
-
 public abstract class Shape {
     double height, width;
     String name;
@@ -27,8 +26,6 @@ public abstract class Shape {
 
 `Rectangle.java`
 ```
-package Abstract_Methods;
-
 public class Rectangle extends Shape {
     
     Rectangle()
@@ -49,8 +46,6 @@ public class Rectangle extends Shape {
 ```
 `Triangle.java`
 ```
-package Abstract_Methods;
-
 public class Triangle extends Shape{
     
     Triangle()
@@ -72,8 +67,6 @@ public class Triangle extends Shape{
 
 `Driver.java`
 ```
-package Abstract_Methods;
-
 public class Driver {
     public static void main(String[] args) {
         
@@ -91,163 +84,119 @@ public class Driver {
     }
 }
 ```
+In Java programming, it is sometimes helpful to define what a class must do but not how it will do it. It also helps in allowing unrelated classes to implement from it.
 
-In Java programming, it is sometimes helpful to define what a class must do but not how it will do it.
-
-`Series.java`
+`Drawable.java`
 ```
-package Interfaces;
-
-public interface Series {
-    int getNext();
-    void reset();
-    void setStart(int x);
+public interface Drawable {
+    public void draw();
 }
 ```
-
-`Ones.java`
+`Car.java`
 ```
-package Interfaces;
+public class Car implements Drawable{
+    public String name;
 
-public class Ones implements Series{
-    int start;
-    int value;
-
-    Ones()
+    public Car()
     {
-        this.start = 0;
-        this.value = 0;
+        this.name = "";
     }
-    public int getNext()
+    public Car(String name)
     {
-        this.value += 1;
-        return this.value;
+        this.name = name;
     }
-    public void reset()
+    public void draw()
     {
-        this.value = 0;
-    }
-    public void setStart(int x)
-    {
-        this.start = x;
-        this.value = x;
-
+        System.out.println("Drawing a design of a car");
     }
 }
 ```
-
-`Twos.java`
+`Toy.java`
 ```
-package Interfaces;
+public class Toy implements Drawable{
+    public String type;
 
-public class Twos implements Series{
-    int start;
-    int value;
-
-    Twos()
+    public Toy()
     {
-        this.start = 0;
-        this.value = 0;
+        this.type = "";
     }
-    public int getNext()
+    public Toy(String type)
     {
-        this.value += 2;
-        return this.value;
+        this.type = type;
     }
-    public void reset()
+    public void draw()
     {
-        this.value = 0;
-    }
-    public void setStart(int x)
-    {
-        this.start = x;
-        this.value = x;
-
+        System.out.println("Drawing a design of a toy");
     }
 }
 ```
-
 `Driver.java`
 ```
-package Interfaces;
-
 public class Driver {
     public static void main(String[] args) {
-        Ones ones = new Ones();
-        
-        for (int i =0; i<5; i++)
-        {
-            System.out.println("Next value: " + ones.getNext());
-        }
-
-        ones.setStart(100);
-        for (int i =0; i<5; i++)
-        {
-            System.out.println("Next value: " + ones.getNext());
-        }
-
-        ones.reset();
-        for (int i =0; i<5; i++)
-        {
-            System.out.println("Next value: " + ones.getNext());
-        }
-
-        Twos twos = new Twos();
-
-        for (int i =0; i<5; i++)
-        {
-            System.out.println("Next value: " + twos.getNext());
-        }
+        Car car = new Car("Toyota");
+        Toy toy = new Toy("Tank");
+        car.draw();
+        toy.draw();
     }
 }
 ```
-
-In programming, it is often helpful to group related pieces of a program together. In Java, this can be accomplished by using a package.
+In programming, it is often helpful to group related pieces of a program together. In Java, this can be accomplished by using a package. With a subdirectory Library, we can write the following code
 
 `Book.java`
 ```
-package Packages;
+package Library;
 
-/**
- * Book
- */
 public class Book {
+    String name, author;
 
-    String name;
-    String author;
-
-    Book(String name, String author)
+    public Book(String name, String author)
     {
         this.name = name;
         this.author = author;
     }
-
     public String toString()
     {
-        return "Name: " + this.name + " Author: " + this.author;
+        return this.name + ", " + this.author;
+    }
+}
+```
+`Journal.java`
+```
+package Library;
+
+public class Journal {
+    String type;
+
+    public Journal(String type)
+    {
+        this.type = type;
+    }
+    public String toString()
+    {
+        return this.type;
     }
 }
 ```
 `Driver.java`
 ```
-package Packages;
+package Library;
 
 public class Driver {
-
     public static void main(String[] args) {
-        Book book  = new Book("Data Structure", "Oreily");
+        Book book = new Book("Java Programming", "Deitel");
+        Journal journal = new Journal("Science");
+
         System.out.println(book.toString());
+        System.out.println(journal.toString());
     }
-    
+
 }
 ```
 Access modifiers work for packages as well. By default classes have package access which means they are visible to all classes within their package. However, this access can be change by changing access modifiers to private which would make that data member inaccessible outside the class.
 ```
 package Packages;
 
-/**
- * Book
- */
 public class Book {
 
     private String name;
@@ -265,12 +214,10 @@ public class Book {
     }
 }
 ```
-A final is pretty handy keyword in java. It helps in avoiding accidentle change of values for a variable just like const in C++. 
-
-Below code will produce an error.
-
-`Student.java`
+A `final` is pretty handy keyword in java. It helps in avoiding accidentle change of values for a variable just like const in C++.  Below code will produce an error.
 ```
+Student.java
+
 package Final_Keyword;
 
 public class Student {
@@ -284,12 +231,10 @@ public class Student {
     }
 }
 ```
-`final` keyword can also be used to avoid inheritance of classes.
-
-This code will produce an error.
-
-`Student.java`
+`final` keyword can also be used to avoid inheritance of classes. This code will produce an error.
 ```
+Student.java
+
 package Final_Keyword;
 
 public final class Student {
@@ -337,7 +282,6 @@ public class Driver {
 `final` keyword can also be used to prevent overriding of methods display method in the code below cannot be overridden in child classes
 
 `Student.java`
-
 ```
 package Final_Keyword;
 
@@ -359,7 +303,6 @@ public class Student {
     {
         System.out.println("Name: " + this.name);
     }
-
 }
 ```
 There is an `Object` class in Java which is the parent class of all the classes. Even if no parent class is specified, that class would be extended from Object class. Parent of Student class below is Object class although it is not explicity mentioned.
@@ -382,7 +325,7 @@ public class Student {
     }
 }
 ```
-The `toString()` method is basically a method in Object class which is overridden in child classes and hence requires public access.
+The `toString()` method is basically a method in Object class which is overridden in child classes and hence requires public access.  
 
 Exception handling streamlines error handling by allowing your program to define a block of code, called an exception handler, that is executed automatically when an error occurs.
 
@@ -393,7 +336,6 @@ package Exception_Handling;
 public class Driver {
     public static void main(String[] args) {
         int nums[] = new int[4];
-
         try
         {
             nums[7] = 10;
@@ -405,7 +347,6 @@ public class Driver {
         
     }
 }
-
 ```
 Exceptions can be generated in a separate method and can be caught in another method
 ```
@@ -431,6 +372,113 @@ public class Driver {
         }
         
         
+    }
+}
+```
+**Series Exercise Solution**  
+
+`Series.java`
+```
+package Interfaces;
+
+public interface Series {
+    int getNext();
+    void reset();
+    void setStart(int x);
+}
+```
+
+`Ones.java`
+```
+package Interfaces;
+
+public class Ones implements Series{
+    int start;
+    int value;
+
+    Ones()
+    {
+        this.start = 0;
+        this.value = 0;
+    }
+    public int getNext()
+    {
+        this.value += 1;
+        return this.value;
+    }
+    public void reset()
+    {
+        this.value = 0;
+    }
+    public void setStart(int x)
+    {
+        this.start = x;
+        this.value = x;
+    }
+}
+```
+
+`Twos.java`
+```
+package Interfaces;
+
+public class Twos implements Series{
+    int start;
+    int value;
+
+    Twos()
+    {
+        this.start = 0;
+        this.value = 0;
+    }
+    public int getNext()
+    {
+        this.value += 2;
+        return this.value;
+    }
+    public void reset()
+    {
+        this.value = 0;
+    }
+    public void setStart(int x)
+    {
+        this.start = x;
+        this.value = x;
+    }
+}
+```
+
+`Driver.java`
+```
+package Interfaces;
+
+public class Driver {
+    public static void main(String[] args) {
+        Ones ones = new Ones();
+        
+        for (int i =0; i<5; i++)
+        {
+            System.out.println("Next value: " + ones.getNext());
+        }
+
+        ones.setStart(100);
+        for (int i =0; i<5; i++)
+        {
+            System.out.println("Next value: " + ones.getNext());
+        }
+
+        ones.reset();
+        for (int i =0; i<5; i++)
+        {
+            System.out.println("Next value: " + ones.getNext());
+        }
+
+        Twos twos = new Twos();
+
+        for (int i =0; i<5; i++)
+        {
+            System.out.println("Next value: " + twos.getNext());
+        }
     }
 }
 ```
