@@ -209,7 +209,7 @@ public class Driver {
                 System.out.printf("%s found in the array.", city_name);
             }
         }
-        // Time Complexity = O(n) 
+        // Time Complexity = O(n*m) 
     }
 
     public static void display(String[] cities)
@@ -301,7 +301,7 @@ public static void searchStudents(Student[] students)
                 System.out.printf("%s found", student.name);
             }
         }
-        // Time Complexity = O(n) 
+        // Time Complexity = O(n*m) 
     }
 ```
 Arrays can be sorted in ascending or descending order
