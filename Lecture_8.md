@@ -1,7 +1,7 @@
 # Collections and Array Optimizations
 
 **5-Step Process For Algorithm Analysis**
-
+```
 public static void display(int numbers[])
 {
 //Step 1: Identify Time complexity of each statemen
@@ -16,7 +16,7 @@ public static void display(int numbers[])
         // Step 4: Identify significantly growing term = O(2n)
         // Step 5: Remove constants = O(n)
 }
-
+```
 Java offers multi-dimensional arrays as well.
 ```
 public class Driver {
