@@ -1,7 +1,7 @@
 # Binary Tree Traversals
 
 Tree traversals can be level wise which is also called Breadth First Traversals
-```
+```Java
 public static void levelOrder(Node root)
     {
         LinkedList<Node> list = new LinkedList<>();
@@ -24,7 +24,7 @@ public static void levelOrder(Node root)
     }
 ```
 Traversals can be Depth First as well which are pre-order, in-order and post-order
-```
+```Java
 public static void preOrder(Node root)
     {
         if (root == null)
@@ -60,7 +60,7 @@ public static void preOrder(Node root)
     }
 ```
 Above functions can be used with the following main method
-```
+```Java
 public static void main(String[] args) {
 
         Node root = new Node(5);
@@ -87,7 +87,7 @@ public static void main(String[] args) {
 }
 ```
 Deleting a node from the tree is pretty complicated. Deleting a node with no children is the easiest.
-```
+```Java
 public static boolean delete(Node root, int value)
     {
         Node currentNode = root;
@@ -135,7 +135,7 @@ public static boolean delete(Node root, int value)
     }
 ```
 All above examples use following Node class
-```
+```Java
 class Node
 {
     int value;

@@ -3,7 +3,7 @@
 Hashmaps are used to improve efficiency while searching
 
 `HashMap.java`
-```
+```Java
 package HashMaps;
 
 class Node
@@ -99,7 +99,7 @@ public class HashMap {
 ```
 
 `Driver.java`
-```
+```Java
 package HashMaps;
 
 public class Driver {
@@ -127,7 +127,7 @@ public class Driver {
 }
 ```
 Java has a built in HashMap as well.
-```
+```Java
 package HashMaps_Java;
 
 import java.util.HashMap;
@@ -152,7 +152,7 @@ public class Driver {
 ```
 
 Find occurrences of characters in a string
-```
+```Java
 package Good_String;
 
 import java.util.HashMap;

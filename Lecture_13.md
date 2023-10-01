@@ -1,6 +1,6 @@
 # Recursion in Java
 Java offers recursion just like C++. The program below uses recursion to find factorial of a number
-```
+```Java
 public class Driver {
 
     public static int factorial(int n)
@@ -30,7 +30,7 @@ public class Driver {
 ```
 
 Recursive functions can be expensive when it comes to time complexity
-```
+```java
     public static int fibonacci(int n)
     {
         if (n <= 1)
@@ -56,7 +56,7 @@ Recursive functions can be expensive when it comes to time complexity
     }
 ```
 Power function can also be solved using recursion.
-```
+```java
     public static int power(int base, int exp)
     {
         if (exp < 0)
@@ -84,7 +84,7 @@ Power function can also be solved using recursion.
     }
 ```
 Power function can be solved without recursion with O(n)
-```
+```java
     public static int power_simple(int base, int exp)
     {
         int result = 1;
@@ -97,7 +97,7 @@ Power function can be solved without recursion with O(n)
     }
 ```
 Remove duplicates from LinkedList using Recursion
-```
+```Java
 public static Node removeDuplicates(Node node, int value)
     {
         if (node == null)
@@ -143,7 +143,7 @@ public static Node removeDuplicates(Node node, int value)
     }
 ```
 Function can be simplified as:
-```
+```Java
 public static Node removeDuplicates(Node node, int value)
     {
         if (node == null)

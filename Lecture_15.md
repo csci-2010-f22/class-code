@@ -1,6 +1,6 @@
 # Sorting in Java I
 After Bubble Sort, selection sort is one of the simplest sorting algorithms.
-```
+```Java
 package Selection_Sort;
 
 import java.util.Arrays;
@@ -36,7 +36,7 @@ public class Driver {
 }
 ```
 Another approach to sort is using insertion sort
-```
+```Java
 package Insertion_Sort;
 
 import java.util.Arrays;
@@ -69,7 +69,7 @@ public class Driver {
 ```
 
 Sorting LinkedLists using Selection Sort
-```
+```Java
 package LinkedList_Selection_Sort;
 
 class Node

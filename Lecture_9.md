@@ -1,7 +1,7 @@
 # Stacks and Queues
 
 Java has a built-in class for Stack under java.util package.
-```
+```Java
 package Stack_Class;
 
 import java.util.Scanner;
@@ -56,7 +56,7 @@ public class Driver {
 ```
 
 Stacks can help in validating an equation. Assume an equation in the form of a string which has characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
-```
+```Java
 package Valid_Parenthesis;
 
 import java.util.Stack;
@@ -94,7 +94,7 @@ public class Driver {
 ```
 
 Remove all the consecutive duplicates from the string using stack.
-```
+```Java
 package Remove_Duplicates;
 
 import java.util.Stack;
@@ -137,7 +137,7 @@ public class Driver {
 Java has some built-in classes and intefaces for queue as well. PriorityQueue is one of them.
 
 `Driver.java`
-```
+```Java
 package PriorityQueue_Class;
 
 import java.util.PriorityQueue;
@@ -179,7 +179,7 @@ public class Driver {
 
 
 A java program that returns the max. product of 2 elements from an array using PriorityQueue.
-```
+```Java
 package Maximum_Product;
 
 import java.util.Collections;

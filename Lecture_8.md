@@ -1,7 +1,7 @@
 # Collections and Array Optimizations
 
 **5-Step Process For Algorithm Analysis**  
-```
+```java
 public static void display(int numbers[])
 {
 //Step 1: Identify Time complexity of each statemen
@@ -18,7 +18,7 @@ public static void display(int numbers[])
 }
 ```
 Java offers multi-dimensional arrays as well.
-```
+```java
 public class Driver {
     
     public static void display(int[][] numbers)
@@ -40,7 +40,7 @@ public class Driver {
 ```
 The `ArrayList` class is a resizable array, which can be found in the java.util package. The difference between a built-in array and an ArrayList in Java, is that the size of an array cannot be modified (if you want to add or remove elements to/from an array, you have to create a new one). While elements can be added and removed from an ArrayList whenever you want.
 
-```
+```java
 import java.util.ArrayList;
 
 public class Driver {
@@ -58,7 +58,7 @@ public class Driver {
 }
 ```
 `ArrayList` has built-in methods like add and get to insert or get the elements.
-```
+```java
 import java.util.ArrayList;
 
 public class Driver {
@@ -84,7 +84,7 @@ public class Driver {
 ```
 `set` method can be used to modify an element at a specific index in ArrayList
 
-```
+```java
 import java.util.ArrayList;
 
 public class Driver {
@@ -117,7 +117,7 @@ public class Driver {
 ```
 Elements can be removed from ArrayList as well using remove method
 
-```
+```java
 import java.util.ArrayList;
 
 public class Driver {
@@ -151,7 +151,7 @@ public class Driver {
 ```
 `ArrayList`` can be used with other data types
 
-```
+```java
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -178,7 +178,7 @@ Collections.sort(numbers, Comparator.reverseOrder());
 ```
 
 Comparing Strings can be done using ArrayList of Strings
-```
+```java
 public static boolean compareStringArrays(ArrayList<String> str1, ArrayList<String> str2)
     {
         boolean flag = true;
@@ -219,7 +219,7 @@ public static boolean compareStringArrays(ArrayList<String> str1, ArrayList<Stri
     }
 ```
 Similarly, we can use ArrayList for objects of classes as well and use sorting on data members of those objects as below:
-```
+```java
 class Student
 {
     String name;
@@ -258,7 +258,7 @@ public class Driver {
 **Space Complexity**  
 Besides Time complexity it is also important to look at the space complexity. Consider the program below which takes the running sum of the elements of an array:
 
-```
+```java
 public class Driver {
 
     public static int[] runningSum(int[] numbers) 
@@ -284,7 +284,7 @@ public class Driver {
 }
 ```
 The space complexity of this algorithm is `O(n)` since it creates a new array of the same size as the original to store the result. This can be optimized by using the original array as a resulting array as well that would reduce the space complexity to `O(1)`:
-```
+```java
 public static void running_sum(int numbers[])
 {
         for (int i=1; i<numbers.length; i++)

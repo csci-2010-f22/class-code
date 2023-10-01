@@ -3,7 +3,7 @@
 Inner classes are allowed in Java as they can help in providing extra functionality in an organized manner.
 
 `Student.java`
-```
+```Java
 public class Student {
     String name;
     int age;
@@ -43,7 +43,7 @@ public class Student {
 }
 ```
 `Driver.java`
-```
+```Java
 public class Driver {
     
     public static void main(String[] args) {
@@ -59,7 +59,7 @@ public class Driver {
 Just like C++, Java offer Inheritance
 
 `Vehicle.java`
-```
+```Java
 package Inheritance;
 
 public class Vehicle {
@@ -86,7 +86,7 @@ public class Vehicle {
 
 ```
 `Car.java`
-```
+```Java
 package Inheritance;
 
 public class Car extends Vehicle {
@@ -109,7 +109,7 @@ public class Car extends Vehicle {
 }
 ```
 `Driver.java`
-```
+```Java
 package Inheritance;
 
 
@@ -124,7 +124,7 @@ public class Driver {
 Java does not offer multiple inheritance, however, it does offer multi-level-inheritance
 
 `Phone.java`
-```
+```Java
 package Multi_Level_Inheritance;
 
 public class Phone {
@@ -137,7 +137,7 @@ public class Phone {
 ```
 
 `SmartPhone.java`
-```
+```Java
 package Multi_Level_Inheritance;
 
 public class SmartPhone extends Phone {
@@ -149,7 +149,7 @@ public class SmartPhone extends Phone {
 }
 ```
 `Android.java`
-```
+```Java
 package Multi_Level_Inheritance;
 
 public class Android extends SmartPhone{
@@ -162,7 +162,7 @@ public class Android extends SmartPhone{
 ```
 
 `Driver.java`
-```
+```Java
 package Multi_Level_Inheritance;
 
 public class Driver {
@@ -179,7 +179,7 @@ public class Driver {
 Java supports Polymorphism, e.g., An object of parent class can hold the reference of a child class.
 
 `Driver.java`
-```
+```Java
 package Polymorphism;
 
 public class Driver {
@@ -196,7 +196,7 @@ public class Driver {
 Using Polymorphism at run time, Java knows which exact function to call based on the reference it has.
 
 `Shape.java`
-```
+```Java
 package Polymorphism_2;
 
 public class Shape {
@@ -222,7 +222,7 @@ public class Shape {
 }
 ```
 `Rectangle.java`
-```
+```Java
 package Polymorphism_2;
 
 public class Rectangle extends Shape {
@@ -246,7 +246,7 @@ public class Rectangle extends Shape {
 
 `Triangle.java`
 
-```
+```Java
 package Polymorphism_2;
 
 public class Triangle extends Shape{
@@ -269,7 +269,7 @@ public class Triangle extends Shape{
 
 ```
 `Driver.java`
-```
+```Java
 package Polymorphism_2;
 
 public class Driver {
@@ -293,7 +293,7 @@ public class Driver {
 **Event Exercise Solution**  
 
 `Event.java`
-```
+```java
 import java.time.LocalDate;
 
 public class Event {
@@ -313,7 +313,7 @@ public class Event {
 }
 ```
 `Wedding.java`
-```
+```java
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -330,7 +330,7 @@ public class Wedding extends Event{
 }
 ```
 `Birthday.java`
-```
+```java
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -348,7 +348,7 @@ public class Birthday extends Event{
 }
 ```
 `Driver.java`
-```
+```java
 import java.time.LocalDate;
 
 public class Driver {

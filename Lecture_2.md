@@ -1,7 +1,7 @@
 # Data Types and Type Casting in Java
 
 Java uses various data types just like C and C++.
-```
+```Java
 public class Student {
     
     public static void main(String[] args) {
@@ -20,7 +20,7 @@ public class Student {
 }
 ```
 `printf` is another way of printing in Java much like C and C++.
-```
+```Java
 public class Student {
     
     public static void main(String[] args) {
@@ -35,7 +35,7 @@ public class Student {
 }
 ```
 Instance members (variables) are used in Java much like member functions. More than 1 can be created. An instance of the class is required to access these variables inside a static method.
-```
+```Java
 public class Student {
     String name = "Steve Jobs";
     int age = 55;
@@ -52,7 +52,7 @@ public class Student {
 ```
 Member functions can access instance variables without creating an instance of a class. However, to call a member function in a static function, an instance is required for that class.
 
-```
+```Java
 public class Student {
     String name = "Steve Jobs";
     int age = 55;
@@ -74,7 +74,7 @@ public class Student {
 }
 ```
 Conditional statements in Java are similar to C and C++.
-```
+```Java
 public class Student {
     String name = "Steve Jobs";
     int age = 55;
@@ -120,7 +120,7 @@ public class Student {
 }
 ```
 Java has loops similar to C and C++.
-```
+```Java
     void progress()
     {
         int i = 1;
@@ -133,7 +133,7 @@ Java has loops similar to C and C++.
     }
 ```
 Java functions can return results based on various data types.
-```
+```Java
 public class Numbers {
 
     public static double power(int base, int exponent)
@@ -162,7 +162,7 @@ public class Numbers {
 }
 ```
 Java allows casting from one data type to another. Java allows implicit casting as well as explicit casting.
-```
+```Java
 // Implicit Casting
 
     public static void casting(int number)
@@ -178,7 +178,7 @@ Java allows casting from one data type to another. Java allows implicit casting 
     }
 ```
 Narrow casting would result in an error as we need lose precision. Below will produce an error
-```
+```Java
     public static void casting(int number)
     {
         double d = 10.5;
@@ -189,7 +189,7 @@ Narrow casting would result in an error as we need lose precision. Below will pr
 
     }
 ```
-```
+```Java
 // Explicit Casting
 
 public static void casting(int number)
@@ -202,7 +202,7 @@ public static void casting(int number)
 }
 ```
 Narrow casting is allowed using explicit casting
-```
+```Java
 public static void casting(int number)
     {
         double d = 10.5;

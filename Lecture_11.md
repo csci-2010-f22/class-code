@@ -3,7 +3,7 @@
 A Link List is a series of nodes connected together. We can implement LinkedList from scratch in Java.
 
 `LinkedList.java`
-```
+```Java
 package LinkedList_Implementation;
 
 class Node
@@ -59,7 +59,7 @@ public class LinkedList {
 }
 ```
 `Driver.java`
-```
+```Java
 package LinkedList_Implementation;
 
 public class Driver {
@@ -77,7 +77,7 @@ public class Driver {
 ```
 LinkedList can perform actions like search. Below function returns true if found else false
 
-```
+```Java
 public Boolean search(int number)
     {
         Boolean found = false;
@@ -100,7 +100,7 @@ public Boolean search(int number)
 We can delete elements from the linkedlist as well.
 
 `LinkedList.java`
-```
+```Java
 package LinkedList_Implementation;
 
 class Node
@@ -212,7 +212,7 @@ public class LinkedList {
 }
 ```
 `Driver.java`
-```
+```Java
 package LinkedList_Implementation;
 
 public class Driver {

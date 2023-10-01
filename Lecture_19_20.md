@@ -2,7 +2,7 @@
 AVL trees help solving worst case scenario of Binary Search Trees
 
 `AVL_Tree.java`
-```
+```Java
 package AVL_Tree;
 
 class Node
@@ -130,7 +130,7 @@ public class AVL {
 }
 ```
 `Driver.java`
-```
+```Java
 package AVL_Tree;
 
 public class Driver {

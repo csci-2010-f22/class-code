@@ -1,6 +1,6 @@
 # Advanced Sorting in Java
 One of quickest ways of sorting is Quick Sort that uses pivot for sorting. It is also an example of Divide and Conquer where collections are first partitioned into smaller collections and then they are recursively sorted.
-```
+```Java
 package Quick_Sort;
 
 import java.util.Arrays;
@@ -55,7 +55,7 @@ public class Driver {
 }
 ```
 Sorting String using Quick Sort
-```
+```Java
 import java.util.Arrays;
 
 public class Driver {
@@ -104,7 +104,7 @@ public class Driver {
 }
 ```
 Sorting string by length using Quick Sort
-```
+```Java
 public class Driver {
 
     public static int partition(String[] strings, int start, int end)
@@ -151,7 +151,7 @@ public class Driver {
 }
 ```
 Sort a String Sentence
-```
+```Java
 package Sort_Sentence;
 
 public class Driver {

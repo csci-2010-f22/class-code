@@ -1,7 +1,7 @@
 # Coding Exercises Solution (Week 13)
 
 Q1: Hashmap
-```
+```java
 package HashMap;
 
 import java.util.Arrays;
@@ -48,7 +48,7 @@ public class Driver {
 }
 ```
 Q2: Linked List
-```
+```java
 package LinkedList;
 
 class Node
@@ -126,7 +126,7 @@ public class Driver {
 ```
 
 Q3: Trees
-```
+```java
 package Trees;
 
 class Student
