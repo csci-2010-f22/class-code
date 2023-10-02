@@ -1,7 +1,7 @@
 # Big O 
 
 Constant time function is when the runtime does not increase with the increase in the size of the array
-```
+```Java
 package Big_O;
 
 public class Driver {
@@ -23,7 +23,7 @@ public class Driver {
 }
 ```
 Linear time function is when the runtime increases with the increase in the size of the array or size of the input
-```
+```java
     public static int linear_function(int arr[])
     {
         int sum = 0;  // O(1)
@@ -37,7 +37,7 @@ Linear time function is when the runtime increases with the increase in the size
     }
 ```
 Even will multiple loops, we still get linear time
-```
+```java
     public static void sum_product(int arr[])
     {
         int sum = 0;  // O(1)
@@ -58,7 +58,7 @@ Even will multiple loops, we still get linear time
     }
 ```
 Quadratic Time is when nested loops come into play
-```
+```java
     public static void pairs(int arr[])
     {
         for (int i=0; i<arr.length; i++)  // this runs n times
@@ -77,7 +77,7 @@ Quadratic Time is when nested loops come into play
     }
 ```
 Calculating time with two arrays of different sizes
-```
+```Java
 public static void two_arrays(int arr1[], int arr2[])
     {
         for (int i=0; i<arr1.length; i++)  // this runs n times

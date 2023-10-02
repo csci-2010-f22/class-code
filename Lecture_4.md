@@ -3,7 +3,7 @@
 Java uses the concept of Abstract classes just like C++ except that it does not use virtual keyword and instead uses abstract keyword.
 
 `Shape.java`
-```
+```Java
 public abstract class Shape {
     double height, width;
     String name;
@@ -25,7 +25,7 @@ public abstract class Shape {
 ```
 
 `Rectangle.java`
-```
+```Java
 public class Rectangle extends Shape {
     
     Rectangle()
@@ -45,7 +45,7 @@ public class Rectangle extends Shape {
 }
 ```
 `Triangle.java`
-```
+```Java
 public class Triangle extends Shape{
     
     Triangle()
@@ -66,7 +66,7 @@ public class Triangle extends Shape{
 ```
 
 `Driver.java`
-```
+```Java
 public class Driver {
     public static void main(String[] args) {
         
@@ -87,13 +87,13 @@ public class Driver {
 In Java programming, it is sometimes helpful to define what a class must do but not how it will do it. It also helps in allowing unrelated classes to implement from it.
 
 `Drawable.java`
-```
+```Java
 public interface Drawable {
     public void draw();
 }
 ```
 `Car.java`
-```
+```Java
 public class Car implements Drawable{
     public String name;
 
@@ -112,7 +112,7 @@ public class Car implements Drawable{
 }
 ```
 `Toy.java`
-```
+```Java
 public class Toy implements Drawable{
     public String type;
 
@@ -131,7 +131,7 @@ public class Toy implements Drawable{
 }
 ```
 `Driver.java`
-```
+```Java
 public class Driver {
     public static void main(String[] args) {
         Car car = new Car("Toyota");
@@ -144,7 +144,7 @@ public class Driver {
 In programming, it is often helpful to group related pieces of a program together. In Java, this can be accomplished by using a package. With a subdirectory Library, we can write the following code
 
 `Book.java`
-```
+```Java
 package Library;
 
 public class Book {
@@ -162,7 +162,7 @@ public class Book {
 }
 ```
 `Journal.java`
-```
+```Java
 package Library;
 
 public class Journal {
@@ -179,7 +179,7 @@ public class Journal {
 }
 ```
 `Driver.java`
-```
+```Java
 package Library;
 
 public class Driver {
@@ -194,7 +194,7 @@ public class Driver {
 }
 ```
 Access modifiers work for packages as well. By default classes have package access which means they are visible to all classes within their package. However, this access can be change by changing access modifiers to private which would make that data member inaccessible outside the class.
-```
+```Java
 package Packages;
 
 public class Book {
@@ -215,7 +215,7 @@ public class Book {
 }
 ```
 A `final` is pretty handy keyword in java. It helps in avoiding accidentle change of values for a variable just like const in C++.  Below code will produce an error.
-```
+```java
 Student.java
 
 package Final_Keyword;
@@ -232,7 +232,7 @@ public class Student {
 }
 ```
 `final` keyword can also be used to avoid inheritance of classes. This code will produce an error.
-```
+```java
 Student.java
 
 package Final_Keyword;
@@ -254,7 +254,7 @@ public final class Student {
 }
 ```
 `Undergraduate.java`
-```
+```Java
 package Final_Keyword;
 
 public class Undergraduate extends Student{
@@ -268,7 +268,7 @@ public class Undergraduate extends Student{
 ```
 
 `Driver.java`
-```
+```Java
 package Final_Keyword;
 
 public class Driver {
@@ -282,7 +282,7 @@ public class Driver {
 `final` keyword can also be used to prevent overriding of methods display method in the code below cannot be overridden in child classes
 
 `Student.java`
-```
+```Java
 package Final_Keyword;
 
 public class Student {
@@ -308,7 +308,7 @@ public class Student {
 There is an `Object` class in Java which is the parent class of all the classes. Even if no parent class is specified, that class would be extended from Object class. Parent of Student class below is Object class although it is not explicity mentioned.
 
 `Student.java`
-```
+```Java
 package Object_Class;
 
 public class Student {
@@ -330,7 +330,7 @@ The `toString()` method is basically a method in Object class which is overridde
 Exception handling streamlines error handling by allowing your program to define a block of code, called an exception handler, that is executed automatically when an error occurs.
 
 `Driver.java`
-```
+```Java
 package Exception_Handling;
 
 public class Driver {
@@ -349,7 +349,7 @@ public class Driver {
 }
 ```
 Exceptions can be generated in a separate method and can be caught in another method
-```
+```Java
 package Exception_Handling;
 
 public class Driver {
@@ -378,7 +378,7 @@ public class Driver {
 **Series Exercise Solution**  
 
 `Series.java`
-```
+```Java
 package Interfaces;
 
 public interface Series {
@@ -389,7 +389,7 @@ public interface Series {
 ```
 
 `Ones.java`
-```
+```Java
 package Interfaces;
 
 public class Ones implements Series{
@@ -419,7 +419,7 @@ public class Ones implements Series{
 ```
 
 `Twos.java`
-```
+```Java
 package Interfaces;
 
 public class Twos implements Series{
@@ -449,7 +449,7 @@ public class Twos implements Series{
 ```
 
 `Driver.java`
-```
+```Java
 package Interfaces;
 
 public class Driver {

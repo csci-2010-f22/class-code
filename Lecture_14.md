@@ -3,7 +3,7 @@
 Divide and Conquer is a technique that is used to split a problem into smaller problems.
 
 Merge Sort is one of such applications that uses Divide and Conquer
-```
+```Java
 package MergeSort;
 
 import java.util.Arrays;
@@ -88,7 +88,7 @@ public class Driver {
 }
 ```
 Find Min and Max from array can also be solved using Divide and Conquer
-```
+```Java
 package MinMax;
 
 import java.util.Arrays;

@@ -1,7 +1,7 @@
 # Induction
 
 Induction can be used to calculate the Runtime time. Lets calculate for summation of i.
-```
+```Java
 package Induction;
 
 /**
@@ -49,7 +49,7 @@ public class induction {
 }
 ```
 For summation of square of i
-```
+```Java
 package Induction;
 
 public class square_induction {

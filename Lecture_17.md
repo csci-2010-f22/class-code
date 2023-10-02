@@ -2,7 +2,7 @@
 Binary Search Trees can be implemented using recursive and iterative approach. Below is the iterative approach
 
 `BinarySearchTree.java`
-```
+```Java
 class Node
 {
     int value;
@@ -86,7 +86,7 @@ public class BinarySearchTree
 }
 ```
 `Driver.java`
-```
+```Java
 package BST;
 
 
@@ -110,7 +110,7 @@ public class Driver {
 }
 ```
 Binary Search Trees are very efficient when it comes to searching
-```
+```Java
 public Node search(int value)
     {
         Node currentNode = root;
@@ -138,7 +138,7 @@ public Node search(int value)
     }
 ```
 Recursion can be used to simplify the code for insertion as below:
-```
+```Java
 public void insertion(int value)
     {
         root = insertNode_recursion(root, value);
@@ -163,7 +163,7 @@ public void insertion(int value)
     }
 ```
 Recursion can be used for Search as well
-```
+```Java
 public Node search_recursion(Node root, int value)
     {
         if (root == null || root.value == value)

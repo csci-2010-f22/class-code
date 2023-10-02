@@ -1,7 +1,7 @@
 # Arrays in Java
 
 Just like C++, Java has collections and simplest of it is an array which is much like arrays in C++.
-```
+```Java
 package Simple_Arrays;
 
 /**
@@ -20,7 +20,7 @@ public class Driver {
 }
 ```
 Arrays can be passed to functions in Java
-```
+```Java
 package Simple_Arrays;
 
 /**
@@ -45,7 +45,7 @@ public class Driver {
 }
 ```
 Arrays are passed by reference under the hood but you dont have to worry about that. It is done for you automatically.
-```
+```Java
 package Simple_Arrays;
 
 /**
@@ -75,7 +75,7 @@ public class Driver {
 }
 ```
 If an array in a method is assigned to another location then it would not change the original array.
-```
+```Java
 package Simple_Arrays;
 
 /**
@@ -110,7 +110,7 @@ public class Driver {
 }
 ```
 BTW, a variation of for loop can be used as well
-```
+```java
     public static void display(int[] numbers)
     {
         for(int item: numbers)
@@ -126,7 +126,7 @@ BTW, a variation of for loop can be used as well
     }
 ```
 Getting size and elements from the user
-```
+```Java
 package Simple_Arrays;
 
 import java.util.Scanner;
@@ -172,7 +172,7 @@ public class Driver {
 }
 ```
 Java offers other types of Arrays like String Arrays
-```
+```Java
 package String_Arrays;
 
 public class Driver {
@@ -193,7 +193,7 @@ public class Driver {
 }
 ```
 Arrays in Java offer all the traditional features like search and sort.
-```
+```Java
 package String_Arrays;
 
 public class Driver {
@@ -227,7 +227,7 @@ public class Driver {
 }
 ```
 String has a function that allows comparison by ignoring the case
-```
+```Java
 public static void search(String[] cities)
     {
         String city_name = "toronto";
@@ -245,7 +245,7 @@ public static void search(String[] cities)
 Just like C++, Java allows Arrays of Objects
 
 `Student.java`
-```
+```Java
 package Object_Arrays;
 
 public class Student {
@@ -266,7 +266,7 @@ public class Student {
 ```
 
 `Driver.java`
-```
+```Java
 package Object_Arrays;
 
 public class Driver {
@@ -292,7 +292,7 @@ public class Driver {
 }
 ```
 This student array can be searched for a name as well
-```
+```Java
 public static void searchStudents(Student[] students)
     {
         for (Student student: students){
@@ -305,7 +305,7 @@ public static void searchStudents(Student[] students)
     }
 ```
 Arrays can be sorted in ascending or descending order
-```
+```Java
 public static void sort_students(Student students[]) {
         int n = students.length;
         boolean swapped;
@@ -328,7 +328,7 @@ public static void sort_students(Student students[]) {
 Arrays.sort() method can be used to sort any collection but class has to implement Comparable
 
 `Student.java`
-```
+```Java
 public class Student implements Comparable<Student>{
     String name;
     int age;
@@ -349,7 +349,7 @@ public class Student implements Comparable<Student>{
 }
 ```
 `Driver.java`
-```
+```java
 import java.lang.reflect.Array;
 import java.util.Arrays;
 
@@ -409,7 +409,7 @@ public class Driver {
 ```
 
 Implementing Comparable is not required and Comparator can be used directly in Arrays.sort as below
-```
+```java
     public static void main(String[] args) {
         Student students[] = new Student[]{
             new Student("Steve", 75),
@@ -432,7 +432,7 @@ Implementing Comparable is not required and Comparator can be used directly in A
 
 Names can be compared to sort based on alphabetical order
 
-```
+```java
     public static void main(String[] args) {
         Student students[] = new Student[]{
             new Student("Steve", 75),

@@ -4,7 +4,7 @@ Doubly Linkedlist is a type of linkedlist that keeps track of forward and backwa
 
 `LinkedList.java`
 
-```
+```Java
 package Doubly_LinkedList;
 
 class Node
@@ -72,7 +72,7 @@ public class LinkedList {
 ```
 
 `Driver.java`
-```
+```Java
 package Doubly_LinkedList;
 
 public class Driver {
@@ -90,7 +90,7 @@ public class Driver {
 ```
 
 One of the advantages of DoublyLinkedList is that you can traverse in the backward direction.
-```
+```Java
 public void printBackward()
     {
         Node currentNode = this.tail;
@@ -111,7 +111,7 @@ public void printBackward()
 Java has a built-in LinkedList class with some useful methods. Below is a simple LinkedList
 
 `Driver.java`
-```
+```Java
 package LinkedList_Class;
 
 import java.util.LinkedList;
@@ -142,14 +142,14 @@ Below will modify an element at a specific index
 `list.set(1, 5);`
 
 Below will help in iterating through the elements of LinkedList
-```
+```Java
 for (int item : list)
 {
         System.out.println(item);
 }
 ```
 LinkedList can be pretty handy in solving some mathematical problems like converting binary to decimal
-```
+```Java
 public class Driver {
 
     public static int convert(LinkedList<Integer> list)
@@ -177,7 +177,7 @@ public class Driver {
 To further practice, lets remove duplicates from the LinkedList but by implementing from scratch
 
 `Driver.java`
-```
+```Java
 package Remove_Duplicates;
 
 class Node
