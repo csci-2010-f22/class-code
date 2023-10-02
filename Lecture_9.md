@@ -195,9 +195,9 @@ public class Driver {
     {
         PriorityQueue<Integer> queue = new PriorityQueue<>(Collections.reverseOrder());
 
-        for (int number: numbers)
+        for (int number: numbers) // Time Complexity = O(n)
         {
-            queue.add(number);
+            queue.add(number);    // Time Complexity = O(log n)
         }
         
         // while(!queue.isEmpty())
@@ -206,6 +206,8 @@ public class Driver {
         // }
         int result = queue.poll() * queue.poll();
         return result;
+        // Time Complexity = O(nlogn)
+        // Space Complexity = O(n)
 
     }
     
