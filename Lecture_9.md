@@ -84,6 +84,8 @@ public class Driver {
 
         }
         return stack.empty();
+        // Time Complexity = O(n)
+        // Space Complexity = O(n)
     }
 
     public static void main(String[] args) 
