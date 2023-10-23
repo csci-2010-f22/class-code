@@ -96,6 +96,46 @@ Power function can be solved without recursion with O(n)
         // Time complexity = O(n)
     }
 ```
+Printing the Linked List using recursion
+```
+	class Node
+	{
+	    int data;
+	    Node next;
+
+	    Node(int data)
+	    {
+        	this.data = data;
+	    }
+	}
+
+	public class Driver 
+	{
+	    public static void print(Node head)
+	    {
+        	if (head == null)
+	        {
+        	    return;
+	        }
+        	else
+	        {
+        	    System.out.println(head.data);
+	            print(head.next);
+        	}
+	    }
+
+	    public static void main(String[] args) 
+	    {     
+        	Node head = new Node(2);
+	        head.next = new Node(3);
+        	head.next.next = new Node(5);
+	        head.next.next.next = new Node(7);
+
+	        print(head);
+        
+	    }
+	}
+```
 Remove duplicates from LinkedList using Recursion
 ```Java
 public static Node removeDuplicates(Node node, int value)
