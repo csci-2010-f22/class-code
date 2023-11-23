@@ -191,3 +191,28 @@ public class Driver {
     }
 }
 ```
+
+Find at least one occurrence of each English alphabet in a string
+```java
+import java.util.HashSet;
+
+public class Driver {
+
+    public static boolean isPangram(String sentence) {
+        HashSet<Character> set = new HashSet<>();
+        for (char c : sentence.toCharArray()) {
+            if (Character.isLetter(c)) {
+                char lowercaseC = Character.toLowerCase(c);
+                set.add(lowercaseC);
+            }
+        }
+        return set.size() == 26;
+    }
+
+    public static void main(String[] args) {
+        String sentence = "thequickbrownfoxjumpsoverthelazydog";
+        boolean result = isPangram(sentence);
+        System.out.println(result);
+    }
+}
+```
